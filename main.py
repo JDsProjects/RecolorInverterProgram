@@ -549,321 +549,326 @@ if run_rest == "True":
   f.write(time_usage_formatted)
   f.write("\n")
   f.close()
+  g = open("inverted_colors/inverted_cc.txt","a")
+  g.write("Inverted Color Code:\n")
+  g.write(test_string99)
+  g.write("\n")
+  g.write(time_usage_formatted)
+  g.write("\n")
+  g.close()
+
+
+
+
+  fo = open("logs/console_output99.txt", "w")
+  fo.write(final_console_output)
+  fo.write(time_usage_formatted)
+  fo.close()
+
+  go = open("inverted_colors/inverted_cc99.txt","w")
+  go.write("Inverted Color Code:\n")
+  go.write(test_string99)
+  go.write("\n")
+  go.write(time_usage_formatted)
+  go.close()
+
+  rgb_log_one = open("rgb_logs/orginal_cc.txt","a")
+  rgb_log_one.write("Orginal Color code(RGB): \n")
+  rgb_log_one.write(RGB_info)
+  rgb_log_one.write("\n")
+  rgb_log_one.write(time_usage_formatted)
+  rgb_log_one.write("\n")
+  rgb_log_one.close()
+
+  rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt","w")
+  rgb_log_one_99.write("Orginal Color code(RGB): \n")
+  rgb_log_one_99.write(RGB_info)
+  rgb_log_one_99.write("\n")
+  rgb_log_one_99.write(time_usage_formatted)
+  rgb_log_one_99.close()
+
+  rgb_log_two = open("rgb_logs/inverted_cc.txt","a")
+  rgb_log_two.write("Inverted Color code(RGB): \n")
+  rgb_log_two.write(RGB_info99)
+  rgb_log_two.write("\n")
+  rgb_log_two.write(time_usage_formatted)
+  rgb_log_two.write("\n")
+  rgb_log_two.close()
+
+  rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt","w")
+  rgb_log_two_99.write("Inverted Color code(RGB): \n")
+  rgb_log_two_99.write(RGB_info99)
+  rgb_log_two_99.write("\n")
+  rgb_log_two_99.write(time_usage_formatted)
+  rgb_log_two_99.close()
+
+  rgb_log_three = open("rgb_logs/inverted_back.txt","a")
+  rgb_log_three.write("Inverted Back to orginal(RGB): \n")
+  rgb_log_three.write(RGB_back99)
+  rgb_log_three.write("\n")
+  rgb_log_three.write(time_usage_formatted)
+  rgb_log_three.write("\n")
+  rgb_log_three.close()
+
+  rgb_log_three_99 = open("rgb_logs/inverted_back99.txt","w")
+  rgb_log_three_99.write("Inverted Back to orginal(RGB): \n")
+  rgb_log_three_99.write(RGB_back99)
+  rgb_log_three_99.write("\n")
+  rgb_log_three_99.write(time_usage_formatted)
+  rgb_log_three_99.close()
+
+  hex_log_one = open("hexadecimal_logs/orginal_color_code.txt","a")
+  hex_log_one.write("Orginal Color Code (Hexadecimal):\n")
+  hex_log_one.write(hexadecimal_info)
+  hex_log_one.write("\n")
+  hex_log_one.write(time_usage_formatted)
+  hex_log_one.write("\n")
+  hex_log_one.close()
+
+  hex_log_two = open("hexadecimal_logs/inverted_color_code.txt","a")
+  hex_log_two.write("Inverted Color Code (Hexadecimal):\n")
+  hex_log_two.write(hexadecimal_info99)
+  hex_log_two.write("\n")
+  hex_log_two.write(time_usage_formatted)
+  hex_log_two.write("\n")
+  hex_log_two.close()
+
+  hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt","a")
+  hex_log_three.write("Inverted Back Color Code (Hexadecimal):\n")
+  hex_log_three.write(hexadecimal_info98)
+  hex_log_three.write("\n")
+  hex_log_three.write(time_usage_formatted)
+  hex_log_three.write("\n")
+  hex_log_three.close()
+
+  hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt","w")
+  hex_log_one_99.write("Orginal Color Code (Hexadecimal):\n")
+  hex_log_one_99.write(hexadecimal_info)
+  hex_log_one_99.write("\n")
+  hex_log_one_99.write(time_usage_formatted)
+  hex_log_one_99.close()
+
+  hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt","w")
+  hex_log_two_99.write("Inverted Color Code (Hexadecimal):\n")
+  hex_log_two_99.write(hexadecimal_info99)
+  hex_log_two_99.write("\n")
+  hex_log_two_99.write(time_usage_formatted)
+  hex_log_two_99.close()
+
+  hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt","w")
+  hex_log_three_99.write("Inverted Back Color Code (Hexadecimal):\n")
+  hex_log_three_99.write(hexadecimal_info98)
+  hex_log_three_99.write("\n")
+  hex_log_three_99.write(time_usage_formatted)
+  hex_log_three_99.close()
+
+  file_there = 1
 
   while True:
 
-    g = open("inverted_colors/inverted_cc.txt","a")
-    g.write("Inverted Color Code:\n")
-    g.write(test_string99)
-    g.write("\n")
-    g.write(time_usage_formatted)
-    g.write("\n")
-    g.close()
-
-
-
-
-    fo = open("logs/console_output99.txt", "w")
-    fo.write(final_console_output)
-    fo.write(time_usage_formatted)
-    fo.close()
-
-    go = open("inverted_colors/inverted_cc99.txt","w")
-    go.write("Inverted Color Code:\n")
-    go.write(test_string99)
-    go.write("\n")
-    go.write(time_usage_formatted)
-    go.close()
-
-    rgb_log_one = open("rgb_logs/orginal_cc.txt","a")
-    rgb_log_one.write("Orginal Color code(RGB): \n")
-    rgb_log_one.write(RGB_info)
-    rgb_log_one.write("\n")
-    rgb_log_one.write(time_usage_formatted)
-    rgb_log_one.write("\n")
-    rgb_log_one.close()
-
-    rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt","w")
-    rgb_log_one_99.write("Orginal Color code(RGB): \n")
-    rgb_log_one_99.write(RGB_info)
-    rgb_log_one_99.write("\n")
-    rgb_log_one_99.write(time_usage_formatted)
-    rgb_log_one_99.close()
-
-    rgb_log_two = open("rgb_logs/inverted_cc.txt","a")
-    rgb_log_two.write("Inverted Color code(RGB): \n")
-    rgb_log_two.write(RGB_info99)
-    rgb_log_two.write("\n")
-    rgb_log_two.write(time_usage_formatted)
-    rgb_log_two.write("\n")
-    rgb_log_two.close()
-
-    rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt","w")
-    rgb_log_two_99.write("Inverted Color code(RGB): \n")
-    rgb_log_two_99.write(RGB_info99)
-    rgb_log_two_99.write("\n")
-    rgb_log_two_99.write(time_usage_formatted)
-    rgb_log_two_99.close()
-
-    rgb_log_three = open("rgb_logs/inverted_back.txt","a")
-    rgb_log_three.write("Inverted Back to orginal(RGB): \n")
-    rgb_log_three.write(RGB_back99)
-    rgb_log_three.write("\n")
-    rgb_log_three.write(time_usage_formatted)
-    rgb_log_three.write("\n")
-    rgb_log_three.close()
-
-    rgb_log_three_99 = open("rgb_logs/inverted_back99.txt","w")
-    rgb_log_three_99.write("Inverted Back to orginal(RGB): \n")
-    rgb_log_three_99.write(RGB_back99)
-    rgb_log_three_99.write("\n")
-    rgb_log_three_99.write(time_usage_formatted)
-    rgb_log_three_99.close()
-
-    hex_log_one = open("hexadecimal_logs/orginal_color_code.txt","a")
-    hex_log_one.write("Orginal Color Code (Hexadecimal):\n")
-    hex_log_one.write(hexadecimal_info)
-    hex_log_one.write("\n")
-    hex_log_one.write(time_usage_formatted)
-    hex_log_one.write("\n")
-    hex_log_one.close()
-
-    hex_log_two = open("hexadecimal_logs/inverted_color_code.txt","a")
-    hex_log_two.write("Inverted Color Code (Hexadecimal):\n")
-    hex_log_two.write(hexadecimal_info99)
-    hex_log_two.write("\n")
-    hex_log_two.write(time_usage_formatted)
-    hex_log_two.write("\n")
-    hex_log_two.close()
-
-    hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt","a")
-    hex_log_three.write("Inverted Back Color Code (Hexadecimal):\n")
-    hex_log_three.write(hexadecimal_info98)
-    hex_log_three.write("\n")
-    hex_log_three.write(time_usage_formatted)
-    hex_log_three.write("\n")
-    hex_log_three.close()
-
-    hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt","w")
-    hex_log_one_99.write("Orginal Color Code (Hexadecimal):\n")
-    hex_log_one_99.write(hexadecimal_info)
-    hex_log_one_99.write("\n")
-    hex_log_one_99.write(time_usage_formatted)
-    hex_log_one_99.close()
-
-    hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt","w")
-    hex_log_two_99.write("Inverted Color Code (Hexadecimal):\n")
-    hex_log_two_99.write(hexadecimal_info99)
-    hex_log_two_99.write("\n")
-    hex_log_two_99.write(time_usage_formatted)
-    hex_log_two_99.close()
-
-    hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt","w")
-    hex_log_three_99.write("Inverted Back Color Code (Hexadecimal):\n")
-    hex_log_three_99.write(hexadecimal_info98)
-    hex_log_three_99.write("\n")
-    hex_log_three_99.write(time_usage_formatted)
-    hex_log_three_99.close()
-
-    print("\ntype clear to clear the text files.. or clear all to clear the text files and the color_code.txt( will not work without a color code) or you can always use delete all, use print to print the contents of the console.")
+    print("\ntype clear to clear the text files.. or clear all to clear the text files and the color_code.txt( will not work without a color code) or you can always use delete all, use print to print the contents of the console. Exit with the command exit(uppercase or lowercase for all commands)")
 
     clear_files_option=input("\npress any button to close this window: ")
 
-    break
+    if clear_files_option.lower() == "clear" and file_there == 1:
 
-  if clear_files_option.lower() == "clear":
+      g2  = open("inverted_colors/inverted_cc.txt","w")
+      g2.truncate()
+      g2.close()
 
-    g2  = open("inverted_colors/inverted_cc.txt","w")
-    g2.truncate()
-    g2.close()
+      f2 = open("logs/console_output.txt","w")
+      f2.truncate()
+      f2.close()
 
-    f2 = open("logs/console_output.txt","w")
-    f2.truncate()
-    f2.close()
+      fo2 = open("logs/console_output99.txt","w")
+      fo2.truncate()
+      fo2.close()
 
-    fo2 = open("logs/console_output99.txt","w")
-    fo2.truncate()
-    fo2.close()
+      go2 = open("inverted_colors/inverted_cc99.txt","w")
+      go2.truncate()
+      go2.close()
 
-    go2 = open("inverted_colors/inverted_cc99.txt","w")
-    go2.truncate()
-    go2.close()
+      rgb_log_one = open("rgb_logs/orginal_cc.txt","w")
+      rgb_log_one.truncate()
+      rgb_log_one.close()
 
-    rgb_log_one = open("rgb_logs/orginal_cc.txt","w")
-    rgb_log_one.truncate()
-    rgb_log_one.close()
+      rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt","w")
+      rgb_log_one_99.truncate()
+      rgb_log_one_99.close()
 
-    rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt","w")
-    rgb_log_one_99.truncate()
-    rgb_log_one_99.close()
+      rgb_log_two = open("rgb_logs/inverted_cc.txt","w")
+      rgb_log_two.truncate()
+      rgb_log_two.close()
 
-    rgb_log_two = open("rgb_logs/inverted_cc.txt","w")
-    rgb_log_two.truncate()
-    rgb_log_two.close()
+      rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt","w")
+      rgb_log_two_99.truncate()
+      rgb_log_two_99.close()
 
-    rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt","w")
-    rgb_log_two_99.truncate()
-    rgb_log_two_99.close()
+      rgb_log_three = open("rgb_logs/inverted_back.txt","w")
+      rgb_log_three.write("\n")
+      rgb_log_three.truncate()
+      rgb_log_three.close()
 
-    rgb_log_three = open("rgb_logs/inverted_back.txt","w")
-    rgb_log_three.write("\n")
-    rgb_log_three.truncate()
-    rgb_log_three.close()
+      rgb_log_three_99 = open("rgb_logs/inverted_back99.txt","w")
+      rgb_log_three_99.truncate()
+      rgb_log_three_99.close()
 
-    rgb_log_three_99 = open("rgb_logs/inverted_back99.txt","w")
-    rgb_log_three_99.truncate()
-    rgb_log_three_99.close()
+      hex_log_one = open("hexadecimal_logs/orginal_color_code.txt","w")
+      hex_log_one.truncate()
+      hex_log_one.close()
 
-    hex_log_one = open("hexadecimal_logs/orginal_color_code.txt","w")
-    hex_log_one.truncate()
-    hex_log_one.close()
+      hex_log_two = open("hexadecimal_logs/inverted_color_code.txt","w")
+      hex_log_two.truncate()
+      hex_log_two.close()
 
-    hex_log_two = open("hexadecimal_logs/inverted_color_code.txt","w")
-    hex_log_two.truncate()
-    hex_log_two.close()
-
-    hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt","w")
-    hex_log_three.truncate()
-    hex_log_three.close()
+      hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt","w")
+      hex_log_three.truncate()
+      hex_log_three.close()
 
 
-    hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt","w")
-    hex_log_one_99.truncate()
-    hex_log_one_99.close()
+      hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt","w")
+      hex_log_one_99.truncate()
+      hex_log_one_99.close()
 
 
-    hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt","w")
-    hex_log_two_99.truncate()
-    hex_log_two_99.close()
+      hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt","w")
+      hex_log_two_99.truncate()
+      hex_log_two_99.close()
 
 
-    hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt","w")
-    hex_log_three_99.truncate()
-    hex_log_three_99.close()
+      hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt","w")
+      hex_log_three_99.truncate()
+      hex_log_three_99.close()
 
 
-  if clear_files_option.lower() == "clear all":
+    if clear_files_option.lower() == "clear all" and file_there == 1:
 
-    g2  = open("inverted_colors/inverted_cc.txt","w")
-    g2.truncate()
-    g2.close()
+      g2  = open("inverted_colors/inverted_cc.txt","w")
+      g2.truncate()
+      g2.close()
 
-    f2 = open("logs/console_output.txt","w")
-    f2.truncate()
-    f2.close()
+      f2 = open("logs/console_output.txt","w")
+      f2.truncate()
+      f2.close()
 
-    fo2 = open("logs/console_output99.txt","w")
-    fo2.truncate()
-    fo2.close()
+      fo2 = open("logs/console_output99.txt","w")
+      fo2.truncate()
+      fo2.close()
 
-    go2 = open("inverted_colors/inverted_cc99.txt","w")
-    go2.truncate()
-    go2.close()
+      go2 = open("inverted_colors/inverted_cc99.txt","w")
+      go2.truncate()
+      go2.close()
 
-    color_code_deleter = open("color_code.txt","w")
-    color_code_deleter.truncate()
-    color_code_deleter.close()
+      color_code_deleter = open("color_code.txt","w")
+      color_code_deleter.truncate()
+      color_code_deleter.close()
 
-    rgb_log_one = open("rgb_logs/orginal_cc.txt","w")
-    rgb_log_one.truncate()
-    rgb_log_one.close()
+      rgb_log_one = open("rgb_logs/orginal_cc.txt","w")
+      rgb_log_one.truncate()
+      rgb_log_one.close()
 
-    rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt","w")
-    rgb_log_one_99.truncate()
-    rgb_log_one_99.close()
+      rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt","w")
+      rgb_log_one_99.truncate()
+      rgb_log_one_99.close()
 
-    rgb_log_two = open("rgb_logs/inverted_cc.txt","w")
-    rgb_log_two.truncate()
-    rgb_log_two.close()
+      rgb_log_two = open("rgb_logs/inverted_cc.txt","w")
+      rgb_log_two.truncate()
+      rgb_log_two.close()
 
-    rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt","w")
-    rgb_log_two_99.truncate()
-    rgb_log_two_99.close()
+      rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt","w")
+      rgb_log_two_99.truncate()
+      rgb_log_two_99.close()
 
-    rgb_log_three = open("rgb_logs/inverted_back.txt","w")
-    rgb_log_three.truncate()
-    rgb_log_three.close()
+      rgb_log_three = open("rgb_logs/inverted_back.txt","w")
+      rgb_log_three.truncate()
+      rgb_log_three.close()
 
-    rgb_log_three_99 = open("rgb_logs/inverted_back99.txt","w")
-    rgb_log_three_99.truncate()
-    rgb_log_three_99.close()
+      rgb_log_three_99 = open("rgb_logs/inverted_back99.txt","w")
+      rgb_log_three_99.truncate()
+      rgb_log_three_99.close()
 
-    hex_log_one = open("hexadecimal_logs/orginal_color_code.txt","w")
-    hex_log_one.truncate()
-    hex_log_one.close()
+      hex_log_one = open("hexadecimal_logs/orginal_color_code.txt","w")
+      hex_log_one.truncate()
+      hex_log_one.close()
 
-    hex_log_two = open("hexadecimal_logs/inverted_color_code.txt","w")
-    hex_log_two.truncate()
-    hex_log_two.close()
+      hex_log_two = open("hexadecimal_logs/inverted_color_code.txt","w")
+      hex_log_two.truncate()
+      hex_log_two.close()
 
-    hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt","w")
-    hex_log_three.truncate()
-    hex_log_three.close()
-
-
-    hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt","w")
-    hex_log_one_99.truncate()
-    hex_log_one_99.close()
+      hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt","w")
+      hex_log_three.truncate()
+      hex_log_three.close()
 
 
-    hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt","w")
-    hex_log_two_99.truncate()
-    hex_log_two_99.close()
+      hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt","w")
+      hex_log_one_99.truncate()
+      hex_log_one_99.close()
 
 
-    hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt","w")
-    hex_log_three_99.truncate()
-    hex_log_three_99.close()
+      hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt","w")
+      hex_log_two_99.truncate()
+      hex_log_two_99.close()
 
-  if clear_files_option.lower() == "delete all":
 
-    for root, dirs, files in os.walk(os.getcwd()+"/logs"):
-      for f in files:
-          os.unlink(os.path.join(root, f))
-      for d in dirs:
-          shutil.rmtree(os.path.join(root, d))
+      hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt","w")
+      hex_log_three_99.truncate()
+      hex_log_three_99.close()
 
-    os.rmdir(os.getcwd()+"/logs")
+    if clear_files_option.lower() == "delete all":
 
-    for root, dirs, files in os.walk(os.getcwd()+"/rgb_logs"):
-      for f in files:
-          os.unlink(os.path.join(root, f))
-      for d in dirs:
-          shutil.rmtree(os.path.join(root, d))
+      file_there = 0
 
-    os.rmdir(os.getcwd()+"/rgb_logs")
+      for root, dirs, files in os.walk(os.getcwd()+"/logs"):
+        for f in files:
+            os.unlink(os.path.join(root, f))
+        for d in dirs:
+            shutil.rmtree(os.path.join(root, d))
 
-    for root, dirs, files in os.walk(os.getcwd()+"/inverted_colors"):
-      for f in files:
-        os.unlink(os.path.join(root, f))
-      for d in dirs:
-        shutil.rmtree(os.path.join(root, d))
+      os.rmdir(os.getcwd()+"/logs")
 
-    os.rmdir(os.getcwd()+"/inverted_colors")
+      for root, dirs, files in os.walk(os.getcwd()+"/rgb_logs"):
+        for f in files:
+            os.unlink(os.path.join(root, f))
+        for d in dirs:
+            shutil.rmtree(os.path.join(root, d))
 
-    os.remove("color_code.txt")
+      os.rmdir(os.getcwd()+"/rgb_logs")
 
-    for root, dirs, files in os.walk(os.getcwd()+"/hexadecimal_logs"):
+      for root, dirs, files in os.walk(os.getcwd()+"/inverted_colors"):
         for f in files:
           os.unlink(os.path.join(root, f))
         for d in dirs:
           shutil.rmtree(os.path.join(root, d))
 
-    os.rmdir(os.getcwd()+"/hexadecimal_logs")
+      os.rmdir(os.getcwd()+"/inverted_colors")
 
-  if clear_files_option.lower() == "print":
+      os.remove("color_code.txt")
 
-    print("\nPrinting contents of Console....")
+      for root, dirs, files in os.walk(os.getcwd()+"/hexadecimal_logs"):
+          for f in files:
+            os.unlink(os.path.join(root, f))
+          for d in dirs:
+            shutil.rmtree(os.path.join(root, d))
 
-    print_content = 0
+      os.rmdir(os.getcwd()+"/hexadecimal_logs")
 
-    string_to_use = ""
+    if clear_files_option.lower() == "print":
 
-    while print_content < len(log.messages):
+      print("\nPrinting contents of Console....")
 
-      string_to_use=string_to_use+(log.messages[print_content])
+      print_content = 0
 
-      print_content = print_content + 1
+      string_to_use = ""
 
-    print("\n")
-    print(string_to_use)
+      while print_content < len(log.messages):
+
+        string_to_use=string_to_use+(log.messages[print_content])
+
+        print_content = print_content + 1
+
+      print("\n")
+      print(string_to_use)
+
+    if clear_files_option.lower() == "exit":
+
+      break
