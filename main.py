@@ -31,6 +31,20 @@ default_cc = """
 8107EC72 0E00
 """
 
+#A color code is a gameshark code that allows you invert Mario in SM64
+
+#This is for anyone who doesn't know what the program does.
+
+#The values are in hexadecimal(6 bits)
+
+#the first lines(the color values are always on the right)
+
+#the first lines countie 4 bits(r and g values)
+
+#the second line counties the last 2 bits open
+
+#the last two are 00, it always follows this.
+
 current_path = os.getcwd()
 all_true_files=os.listdir(current_path)
 #os.rename()
