@@ -31,6 +31,12 @@ default_cc = """
 8107EC72 0E00
 """
 
+current_path = os.getcwd()
+all_true_files=os.listdir(current_path)
+#os.rename()
+
+#list directories.
+
 #uses the default color code if there isn't a color code(yes it checks everytime)
 
 default_color_codes=default_cc.split("\n")
