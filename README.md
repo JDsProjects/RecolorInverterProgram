@@ -57,3 +57,5 @@ if you can't DM me, join the server link above, dm me.
 You can always exit if you want.
 
 yes please DM me requests too.
+
+That's all :D
