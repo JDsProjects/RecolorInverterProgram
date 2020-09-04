@@ -37,3 +37,5 @@ Also if you don't want to use the default SMG3 color code instert your own in co
 Sourced from: https://repl.it/@JDJGInc_Offical/RCP#main.py
 
 (Done mainly, because version control doesn't work)
+
+(the github kind of went dead for a minute too), wait for a new package.
