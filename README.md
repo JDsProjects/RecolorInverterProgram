@@ -41,3 +41,19 @@ Sourced from: https://repl.it/@JDJGInc_Offical/RCP#main.py
 (the github kind of went dead for a minute too), wait for a new package.
 
 If you want to see the differences in code check out my repl.it
+
+Need extra support?:
+
+Join here:
+
+https://discord.gg/FPBZDUQ
+
+This is where I do my bloopers above.
+
+However, you can DM me on Discord at JDJG Inc. Official#3439
+
+if you can't DM me, join the server link above, dm me.
+
+You can always exit if you want.
+
+yes please DM me requests too.
