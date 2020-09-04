@@ -1,3 +1,39 @@
-# RCP
-This is Recolor Converter Program.
-The new and improved and working inverter. (pretty optimized, but it doesn't really matter. Now available in .exe form)
+# Recolor_InverterProgram-better
+The new and improved and working inverter.
+
+(it's not fully optimized, but it doesn't really matter)
+
+still in the testing phase)
+
+With some help from some awesome people like Nomic, lambda#0987, and more.
+
+(more credits are in the actual main.py file)
+
+Some of the code was used in https://repl.it/@JDJGInc_Offical/JDJGBotSupreme#main.py
+
+Download here:
+
+https://github.com/JDJGInc/RCP/releases
+
+to use:
+
+1. Insert your code into color_code.txt
+
+(example used with SMG3's color code) - must be in the same folder.
+
+Console_output.txt will log all instances while console_output99.txt will only log the last one.
+
+Any txt files with 99 at the end will last instances while the non 99 .txt files, will log all.
+
+Also, for safety reasons, It will generate everything it needs. Also prints the rgb values into the rgb_logs
+
+#https://github.com/cdrx/docker-pyinstaller
+(going to use this soon)
+
+Also includes default color code as well(let the program generate all the files it needs.)
+
+Also if you don't want to use the default SMG3 color code instert your own in color_code.txt
+
+Sourced from: https://repl.it/@JDJGInc_Offical/RCP#main.py
+
+(Done mainly, because version control doesn't work)
