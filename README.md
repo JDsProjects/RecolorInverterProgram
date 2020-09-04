@@ -39,3 +39,5 @@ Sourced from: https://repl.it/@JDJGInc_Offical/RCP#main.py
 (Done mainly, because version control doesn't work)
 
 (the github kind of went dead for a minute too), wait for a new package.
+
+If you want to see the differences in code check out my repl.it
