@@ -33,13 +33,15 @@ default_cc = """
 
 #A color code is a gameshark code that allows you invert Mario in SM64
 
+#left values are addresses in memory
+
 #This is for anyone who doesn't know what the program does.
 
 #The values are in hexadecimal(6 bits)
 
 #the first lines(the color values are always on the right)
 
-#the first lines countie 4 bits(r and g values)
+#the first lines counties 4 bits(r and g values)
 
 #the second line counties the last 2 bits open
 
