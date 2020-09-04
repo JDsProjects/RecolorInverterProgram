@@ -59,3 +59,5 @@ You can always exit if you want.
 yes please DM me requests too.
 
 That's all :D
+
+Virustotal scan: https://www.virustotal.com/gui/file/fd5f0368942797909227acb357569102482c87c4e47287f830b111685e488700/detection
