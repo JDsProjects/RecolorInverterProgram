@@ -428,7 +428,7 @@ if run_rest == "True":
 
   if test_string == test_string998:
 
-    print("\nrun 100% succesfully")
+    print("\nran 100% succesfully")
 
   if not test_string == test_string998:
 
@@ -643,7 +643,7 @@ if run_rest == "True":
     hex_log_three_99.write(time_usage_formatted)
     hex_log_three_99.close()
 
-    print("\n type clear to clear the text files.. or clear all to clear the text files and the color_code.txt( will not work without a color code) or you can always use delete all")
+    print("\ntype clear to clear the text files.. or clear all to clear the text files and the color_code.txt( will not work without a color code) or you can always use delete all, use print to print the contents of the console.")
 
     clear_files_option=input("\npress any button to close this window: ")
 
@@ -829,4 +829,19 @@ if run_rest == "True":
 
     os.rmdir(os.getcwd()+"/hexadecimal_logs")
 
-  
+  if clear_files_option.lower() == "print":
+
+    print("\nPrinting contents of Console....")
+
+    print_content = 0
+
+    string_to_use = ""
+
+    while print_content < len(log.messages):
+
+      string_to_use=string_to_use+(log.messages[print_content])
+
+      print_content = print_content + 1
+
+    print("\n")
+    print(string_to_use)
