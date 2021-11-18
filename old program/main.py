@@ -32,33 +32,33 @@ default_cc = """
 8107EC72 0E00
 """
 
-#A color code is a gameshark code that allows you invert Mario in SM64
+# A color code is a gameshark code that allows you invert Mario in SM64
 
-#left values are addresses in memory
+# left values are addresses in memory
 
-#This is for anyone who doesn't know what the program does.
+# This is for anyone who doesn't know what the program does.
 
-#The values are in hexadecimal(6 bits)
+# The values are in hexadecimal(6 bits)
 
-#the first lines(the color values are always on the right)
+# the first lines(the color values are always on the right)
 
-#the first lines counties 4 bits(r and g values)
+# the first lines counties 4 bits(r and g values)
 
-#the second line counties the last 2 bits open
+# the second line counties the last 2 bits open
 
-#the last two are 00, it always follows this.
+# the last two are 00, it always follows this.
 
 current_path = os.getcwd()
-all_true_files=os.listdir(current_path)
-#os.rename()
+all_true_files = os.listdir(current_path)
+# os.rename()
 
-#list directories.
+# list directories.
 
-#uses the default color code if there isn't a color code(yes it checks everytime)
+# uses the default color code if there isn't a color code(yes it checks everytime)
 
-default_color_codes=default_cc.split("\n")
+default_color_codes = default_cc.split("\n")
 
-double_check=len(default_color_codes)
+double_check = len(default_color_codes)
 
 number_required = 0
 
@@ -68,808 +68,834 @@ useful_info666 = ""
 
 while number_required < double_check:
 
-  check_values=default_color_codes[number_required]
+    check_values = default_color_codes[number_required]
 
-  if  check_values== '':
+    if check_values == "":
 
-    number_required = number_required + 1
+        number_required = number_required + 1
 
-    not_safe = not_safe + 1
-  
-  if not check_values == '':
+        not_safe = not_safe + 1
 
-    number_required = number_required + 1
+    if not check_values == "":
+
+        number_required = number_required + 1
 
 number_required99 = 0
 
 
-while number_required99  < double_check:
+while number_required99 < double_check:
 
-  if default_color_codes[number_required99] == "":
+    if default_color_codes[number_required99] == "":
 
-    number_required99 = number_required99 + 1
+        number_required99 = number_required99 + 1
 
-  if not default_color_codes[number_required99] == "":
+    if not default_color_codes[number_required99] == "":
 
-    break
+        break
 
 while number_required99 < len(default_color_codes):
 
-  required_info = (default_color_codes[number_required99]+"\n")
+    required_info = default_color_codes[number_required99] + "\n"
 
-  useful_info666 = useful_info666+required_info
-    
+    useful_info666 = useful_info666 + required_info
 
-  number_required99 = number_required99 + 1
+    number_required99 = number_required99 + 1
 
 default_cc99 = str(useful_info666)
 
-default_cc99=default_cc99.strip()
+default_cc99 = default_cc99.strip()
 
-#it's here so you don't need to worry about Possible issues.
+# it's here so you don't need to worry about Possible issues.
 
 
-class Logger():
+class Logger:
     stdout = sys.stdout
     messages = []
 
-    def start(self): 
+    def start(self):
         sys.stdout = self
 
-    def stop(self): 
+    def stop(self):
         sys.stdout = self.stdout
 
-    def write(self, text): 
+    def write(self, text):
         self.messages.append(text)
+
 
 log = Logger()
 
 log.start()
 
-# define our clear function 
+# define our clear function
 
-def clear(): 
-  
-    # for windows 
-    if name == 'nt': 
-        _ = system('cls') 
-  
-    # for mac and linux(here, os.name is 'posix') 
-    else: 
-        _ = system('clear') 
 
-#Thank you https://www.geeksforgeeks.org/clear-screen-python/
+def clear():
 
-can_countie= os.path.exists("color_code.txt")
+    # for windows
+    if name == "nt":
+        _ = system("cls")
+
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system("clear")
+
+
+# Thank you https://www.geeksforgeeks.org/clear-screen-python/
+
+can_countie = os.path.exists("color_code.txt")
 
 if can_countie == True:
 
-  run_rest = "True"
+    run_rest = "True"
 
 if can_countie == False:
 
-  print("\n Since Color_code.txt was non existence, it's using a default color code.)")
+    print(
+        "\n Since Color_code.txt was non existence, it's using a default color code.)"
+    )
 
-  complete_color_code_998 = open("color_code.txt", "w")
-  complete_color_code_998.close()
+    complete_color_code_998 = open("color_code.txt", "w")
+    complete_color_code_998.close()
 
-  run_rest = "True"
+    run_rest = "True"
 
 
 if run_rest == "True":
 
-  if os.stat("color_code.txt").st_size == 0:
+    if os.stat("color_code.txt").st_size == 0:
 
-    file_required = open("color_code.txt","w")
-    file_required.write(default_cc99)
-    file_required.close()
+        file_required = open("color_code.txt", "w")
+        file_required.write(default_cc99)
+        file_required.close()
 
-  complete_color_code_99 = open("color_code.txt", "r")
+    complete_color_code_99 = open("color_code.txt", "r")
 
-  lines = complete_color_code_99.readlines()
+    lines = complete_color_code_99.readlines()
 
+    # insert the color code into the color_code.txt file.
 
-  #insert the color code into the color_code.txt file.
+    clear()
 
-  clear()
+    # the first digits like 8(refer to N64 usually, the only color bit is the 4 digits on the right.... - we still need to reinsert them imnto memory)
 
-  #function version: https://repl.it/@JDJGInc_Offical/InvertRecolorProgram-function#main.py
+    # explained to me by: https://www.youtube.com/watch?v=5lZ31AlgNzw
 
-  #the first digits like 8(refer to N64 usually, the only color bit is the 4 digits on the right.... - we still need to reinsert them imnto memory)
+    Inverted_color_code = []
 
-  #explained to me by: https://www.youtube.com/watch?v=5lZ31AlgNzw
+    Inverted_color_code_inverted = []
 
+    # here to check if both color codes match
 
+    start_needed = ""
 
-  Inverted_color_code = [
-    
-  ]
+    times_running64 = 0
 
-  Inverted_color_code_inverted = [
-    
-  ]
+    while times_running64 < len(lines):
 
-  #here to check if both color codes match
+        needed_file = lines[times_running64]
 
-  start_needed = ""
+        start_needed = start_needed + needed_file
 
-  times_running64 = 0
+        times_running64 = times_running64 + 1
 
-  while times_running64 < len(lines):
+    # used orginally when the color code was in the main.py
 
-    needed_file=lines[times_running64]
+    times_ran_1 = 0
 
-    start_needed = start_needed+needed_file
+    complete_color_code = str(start_needed)
 
-    times_running64 = times_running64 + 1
+    complete_color_code_99.close()
 
+    lines = complete_color_code.split("\n")
 
-  #used orginally when the color code was in the main.py
+    while times_ran_1 < len(lines):
 
-  times_ran_1 = 0
+        if "" == lines[times_ran_1]:
 
-  complete_color_code = str(start_needed)
+            times_ran_1 = times_ran_1 + 1
 
-  complete_color_code_99.close()
+            Inverted_color_code.append("")
 
-  lines=complete_color_code.split("\n")
+            Inverted_color_code_inverted.append("")
 
+            # it should always be correct, unless the hexcode doesn't work, right
 
-  while times_ran_1 < len(lines):
+        if not "" == lines[times_ran_1]:
 
-    if '' == lines[times_ran_1]:
+            break
 
-      times_ran_1 = times_ran_1+1
+    x = int(times_ran_1)
 
-      Inverted_color_code.append('')
+    color_counter = 0
 
-      Inverted_color_code_inverted.append('')
+    times_ran_program_1 = 0
 
-      #it should always be correct, unless the hexcode doesn't work, right
+    # to check to make sure it doesn't go over, and sees if the first slot has a blank spot or not(and finds the first one, without a blank spot)
 
-    if not '' == lines[times_ran_1]:
+    RGB_info = ""
 
-      break
+    hexadecimal_info = ""
 
-  x = int(times_ran_1)
+    while x < len(lines):
 
-  color_counter = 0
+        color_value = lines[x]
 
-  times_ran_program_1 = 0
+        color_value2 = lines[x + 1]
 
-  #to check to make sure it doesn't go over, and sees if the first slot has a blank spot or not(and finds the first one, without a blank spot)
+        colored_bit = color_value.split(" ")
 
-  RGB_info = ""
+        colored_bit2 = color_value2.split(" ")
 
-  hexadecimal_info  = ""
+        color_code_front = colored_bit[0]
 
-  while x < len(lines):
+        color_code_front2 = colored_bit2[0]
 
-    color_value = lines[x]
+        color_section = colored_bit[1]
 
-    color_value2 = lines[x+1]
+        color_section2 = colored_bit2[1]
 
-    colored_bit=color_value.split(" ")
+        r = int(color_section[0:2], 16)
+        g = int(color_section[2:4], 16)
+        b = int(color_section2[0:2], 16)
 
-    colored_bit2 = color_value2.split(" ")
+        hexadecimal_info = (
+            hexadecimal_info
+            + "\nHexadecimal Value "
+            + str(color_counter)
+            + ": #"
+            + str(color_section[0:2])
+            + str(color_section[2:4])
+            + str(color_section2[0:2])
+        )
 
-    color_code_front = colored_bit[0]
+        RGB_info = (
+            RGB_info
+            + "\nRGB Value "
+            + str(color_counter)
+            + ": ("
+            + str(r)
+            + ","
+            + str(g)
+            + ","
+            + str(b)
+            + ")"
+        )
 
-    color_code_front2 = colored_bit2[0]
+        r = 0xFF - r
+        g = 0xFF - g
+        b = 0xFF - b
 
-    color_section = colored_bit[1]
+        # solution suggested by John10v10#5883
 
-    color_section2 = colored_bit2[1]
+        bits_used998 = f"{r:0{2}x}{g:0{2}x}{b:0{2}x}"
 
+        first_color_line = bits_used998[0:4].upper()
 
-    r = int(color_section[0:2], 16)
-    g = int(color_section[2:4], 16)
-    b = int(color_section2[0:2], 16)
+        second_color_line = bits_used998[4:6].upper()
 
-    hexadecimal_info = hexadecimal_info+"\nHexadecimal Value "+str(color_counter)+": #"+str(color_section[0:2])+str(color_section[2:4])+str(color_section2[0:2])
+        color_code_needed = color_code_front + " " + first_color_line
 
-    RGB_info = RGB_info+"\nRGB Value "+str(color_counter)+": ("+str(r)+","+str(g)+","+str(b)+")"
+        color_code_needed_2 = (
+            color_code_front2 + " " + second_color_line + color_section2[2:4]
+        )
 
-    r = 0xFF - r
-    g = 0xFF - g
-    b = 0xFF - b
+        Inverted_color_code.append(color_code_needed)
 
-    #solution suggested by John10v10#5883
+        Inverted_color_code.append(color_code_needed_2)
 
-    bits_used998 = f"{r:0{2}x}{g:0{2}x}{b:0{2}x}"
+        x = x + 2
 
-    first_color_line =  bits_used998[0:4].upper()
+        color_counter = color_counter + 1
 
-    second_color_line = bits_used998[4:6].upper()
+        times_ran_program_1 = times_ran_program_1 + 1
 
-    color_code_needed = color_code_front+" "+first_color_line
+    print("all", x - times_ran_1, "of the color code lines ran!")
 
-    color_code_needed_2 = color_code_front2+" "+second_color_line+color_section2[2:4]
+    times_ran_1 = 0
 
-    Inverted_color_code.append(color_code_needed)
+    while times_ran_1 < len(Inverted_color_code):
 
-    Inverted_color_code.append(color_code_needed_2)
+        if "" == Inverted_color_code[times_ran_1]:
 
-    x = x +2
+            times_ran_1 = times_ran_1 + 1
 
-    color_counter = color_counter + 1
+        if not "" == Inverted_color_code[times_ran_1]:
 
-    times_ran_program_1 = times_ran_program_1 + 1
+            break
 
-  print("all",x-times_ran_1,"of the color code lines ran!")
+    z = int(times_ran_1)
 
-  times_ran_1 = 0
+    RGB_info99 = ""
 
+    RGB_back99 = ""
 
-  while times_ran_1 < len(Inverted_color_code):
+    hexadecimal_info99 = ""
 
-    if '' == Inverted_color_code[times_ran_1]:
+    hexadecimal_info98 = ""
 
-      times_ran_1 = times_ran_1+1
+    color_counter2 = 0
 
-    if not '' == Inverted_color_code[times_ran_1]:
+    while z < len(Inverted_color_code):
 
-      break
+        color_value = Inverted_color_code[z]
 
-  z = int(times_ran_1)
+        color_value2 = Inverted_color_code[z + 1]
 
-  RGB_info99 = ""
+        colored_bit = color_value.split(" ")
 
-  RGB_back99 = ""
+        colored_bit2 = color_value2.split(" ")
 
-  hexadecimal_info99 = ""
+        color_code_front = colored_bit[0]
 
-  hexadecimal_info98 = ""
+        color_code_front2 = colored_bit2[0]
 
-  color_counter2 = 0
+        color_section = colored_bit[1]
 
-  while z < len(Inverted_color_code):
+        color_section2 = colored_bit2[1]
 
-    color_value = Inverted_color_code[z]
+        hexadecimal_info99 = (
+            hexadecimal_info99
+            + "\nHexadecimal Value "
+            + str(color_counter2)
+            + ": #"
+            + str(color_section[0:2])
+            + str(color_section[2:4])
+            + str(color_section2[0:2])
+        )
 
-    color_value2 = Inverted_color_code[z+1]
+        r = int(color_section[0:2], 16)
+        g = int(color_section[2:4], 16)
+        b = int(color_section2[0:2], 16)
 
-    colored_bit=color_value.split(" ")
+        RGB_info99 = (
+            RGB_info99
+            + "\nRGB Value "
+            + str(color_counter2)
+            + ": ("
+            + str(r)
+            + ","
+            + str(g)
+            + ","
+            + str(b)
+            + ")"
+        )
 
-    colored_bit2 = color_value2.split(" ")
+        r = 0xFF - r
+        g = 0xFF - g
+        b = 0xFF - b
 
-    color_code_front = colored_bit[0]
+        RGB_back99 = (
+            RGB_back99
+            + "\nRGB Value "
+            + str(color_counter2)
+            + ": ("
+            + str(r)
+            + ","
+            + str(g)
+            + ","
+            + str(b)
+            + ")"
+        )
 
-    color_code_front2 = colored_bit2[0]
+        # solution suggested by John10v10#5883
 
-    color_section = colored_bit[1]
+        bits_used998 = f"{r:0{2}x}{g:0{2}x}{b:0{2}x}"
 
-    color_section2 = colored_bit2[1]
+        hexadecimal_info98 = (
+            hexadecimal_info98
+            + "\nHexadecimal Value "
+            + str(color_counter2)
+            + ": #"
+            + bits_used998
+        )
 
-    hexadecimal_info99 = hexadecimal_info99+"\nHexadecimal Value "+str(color_counter2)+": #"+str(color_section[0:2])+str(color_section[2:4])+str(color_section2[0:2])
+        first_color_line = bits_used998[0:4].upper()
 
+        second_color_line = bits_used998[4:6].upper()
 
-    r = int(color_section[0:2], 16)
-    g = int(color_section[2:4], 16)
-    b = int(color_section2[0:2], 16)
+        color_code_needed = color_code_front + " " + first_color_line
 
-    RGB_info99 = RGB_info99+"\nRGB Value "+str(color_counter2)+": ("+str(r)+","+str(g)+","+str(b)+")"
+        color_code_needed_2 = (
+            color_code_front2 + " " + second_color_line + color_section2[2:4]
+        )
 
-    r = 0xFF - r
-    g = 0xFF - g
-    b = 0xFF - b
+        Inverted_color_code_inverted.append(color_code_needed)
 
-    RGB_back99 = RGB_back99+"\nRGB Value "+str(color_counter2)+": ("+str(r)+","+str(g)+","+str(b)+")"
+        Inverted_color_code_inverted.append(color_code_needed_2)
 
-    #solution suggested by John10v10#5883
+        z = z + 2
 
-    bits_used998 = f"{r:0{2}x}{g:0{2}x}{b:0{2}x}"
+        color_counter2 = color_counter2 + 1
 
-    hexadecimal_info98 = hexadecimal_info98+"\nHexadecimal Value "+str(color_counter2)+": #"+bits_used998
+    if Inverted_color_code_inverted == lines:
 
-    first_color_line =  bits_used998[0:4].upper()
+        print("\nYour color code was succesfully inverted")
 
-    second_color_line = bits_used998[4:6].upper()
+        want_it = "yes"
 
-    color_code_needed = color_code_front+" "+first_color_line
+        want_it2 = "yes"
 
-    color_code_needed_2 = color_code_front2+" "+second_color_line+color_section2[2:4]
+    if not Inverted_color_code_inverted == lines:
 
-    Inverted_color_code_inverted.append(color_code_needed)
+        print("\nColor failed....")
 
-    Inverted_color_code_inverted.append(color_code_needed_2)
+        want_it = "yes"
 
-    z = z +2
+        want_it2 = "yes"
 
-    color_counter2 = color_counter2 + 1
+    j = int(times_ran_1)
 
+    test_string99 = ""
 
-  if Inverted_color_code_inverted == lines:
+    if want_it == "yes":
 
-    print("\nYour color code was succesfully inverted")
+        print("\nInverted Color Code:")
 
-    want_it = "yes"
+        while j < len(Inverted_color_code):
 
-    want_it2 = "yes"
+            test_string99 = test_string99 + (Inverted_color_code[j] + "\n")
 
-  if not Inverted_color_code_inverted == lines:
+            j = j + 1
 
-    print("\nColor failed....")
+        print(test_string99)
 
-    want_it = "yes"
+    jdjg = int(times_ran_1)
 
-    want_it2 = "yes"
+    if want_it2 == "yes":
 
+        print("\nOrginal Color Code that was inverted and was inverted back: ")
 
+        test_string = ""
 
+        while jdjg < len(Inverted_color_code_inverted):
 
-  j = int(times_ran_1)
+            test_string = test_string + (Inverted_color_code_inverted[jdjg] + "\n")
 
-  test_string99 = ""
+            jdjg = jdjg + 1
 
+        print(test_string)
 
-  if want_it == "yes":
+        print("\nOrginal color code:")
 
-    print("\nInverted Color Code:")
+    jdjg_2 = times_ran_1
 
+    test_string998 = ""
 
-    while j < len(Inverted_color_code):
+    while jdjg_2 < len(lines):
 
-      test_string99 = test_string99+(Inverted_color_code[j]+"\n")
+        test_string998 = test_string998 + (lines[jdjg_2] + "\n")
 
+        jdjg_2 = jdjg_2 + 1
 
-      j = j + 1
+    print(test_string998)
 
-    print(test_string99)
+    if test_string == test_string998:
 
-  jdjg = int(times_ran_1)
+        print("\nran 100% succesfully")
 
-  if want_it2 == "yes":
+    if not test_string == test_string998:
 
-    print("\nOrginal Color Code that was inverted and was inverted back: ")
+        print("\ndidn't run successfully")
 
-    test_string = ""
+    # Old inverters(don't work as well):
 
-    while jdjg < len(Inverted_color_code_inverted):
+    path = os.getcwd()
 
-      test_string = test_string+(Inverted_color_code_inverted[jdjg]+"\n")
+    path99 = path + "/logs"
 
-      jdjg = jdjg + 1
+    path64 = path + "/inverted_colors"
 
-    print(test_string)
+    path_rgb = path + "/rgb_logs"
 
-    print("\nOrginal color code:")
+    path_hex = path + "/hexadecimal_logs"
 
+    if os.path.exists(path99) == True:
 
+        pass
 
-  jdjg_2 = times_ran_1
+    if os.path.exists(path99) == False:
 
-  test_string998 = ""
+        try:
+            os.mkdir(path99)
+        except OSError:
+            print("Creation of the directory %s failed" % path99)
+        else:
+            print("Successfully created the directory %s " % path99)
 
-  while jdjg_2 < len(lines):
+    if os.path.exists(path64) == True:
 
-    test_string998 = test_string998+(lines[jdjg_2]+"\n")
+        pass
 
-    jdjg_2 = jdjg_2 + 1
+    if os.path.exists(path64) == False:
 
-  print(test_string998)
+        try:
+            os.mkdir(path64)
+        except OSError:
+            print("Creation of the directory %s failed" % path64)
+        else:
+            print("Successfully created the directory %s " % path64)
 
-  if test_string == test_string998:
+    if os.path.exists(path_rgb) == True:
 
-    print("\nran 100% succesfully")
+        pass
 
-  if not test_string == test_string998:
+    if os.path.exists(path_rgb) == False:
+        try:
+            os.mkdir(path_rgb)
+        except OSError:
+            print("Creation of the directory %s failed" % path_rgb)
+        else:
+            print("Successfully created the directory %s " % path_rgb)
 
-    print("\ndidn't run successfully")
+    if os.path.exists(path_hex) == True:
 
+        pass
 
+    if os.path.exists(path_hex) == False:
+        try:
+            os.mkdir(path_hex)
+        except OSError:
+            print("Creation of the directory %s failed" % path_hex)
+        else:
+            print("Successfully created the directory %s " % path_hex)
 
+    times_to_run = 0
 
-  #Old inverters(don't work as well):
+    log.stop()
 
-  #https://repl.it/@JDJGInc_Offical/RecolorInverter#main.py
+    final_console_output = ""
 
-  #https://repl.it/@JDJGInc_Offical/RecolorInverter-optimized
+    while times_to_run < len(log.messages):
 
-  path = os.getcwd()
+        final_console_output = final_console_output + log.messages[times_to_run]
 
-  path99 = path+"/logs"
+        times_to_run = times_to_run + 1
 
-  path64 = path+"/inverted_colors"
+    time_usage = time.struct_time(time.localtime())
 
-  path_rgb = path+"/rgb_logs"
+    time_usage_formatted = time.strftime("\nCreation:[%m/%d/%Y, %H:%M:%S]", time_usage)
 
-  path_hex = path+"/hexadecimal_logs"
+    f = open("logs/console_output.txt", "a")
+    f.write(final_console_output)
+    f.write(time_usage_formatted)
+    f.write("\n")
+    f.close()
+    g = open("inverted_colors/inverted_cc.txt", "a")
+    g.write("Inverted Color Code:\n")
+    g.write(test_string99)
+    g.write("\n")
+    g.write(time_usage_formatted)
+    g.write("\n")
+    g.close()
 
-  if os.path.exists(path99) == True:
+    fo = open("logs/console_output99.txt", "w")
+    fo.write(final_console_output)
+    fo.write(time_usage_formatted)
+    fo.close()
 
-    pass
+    go = open("inverted_colors/inverted_cc99.txt", "w")
+    go.write("Inverted Color Code:\n")
+    go.write(test_string99)
+    go.write("\n")
+    go.write(time_usage_formatted)
+    go.close()
 
-  if os.path.exists(path99) ==False:
+    rgb_log_one = open("rgb_logs/orginal_cc.txt", "a")
+    rgb_log_one.write("Orginal Color code(RGB): \n")
+    rgb_log_one.write(RGB_info)
+    rgb_log_one.write("\n")
+    rgb_log_one.write(time_usage_formatted)
+    rgb_log_one.write("\n")
+    rgb_log_one.close()
 
-    try:
-      os.mkdir(path99)
-    except OSError:
-        print ("Creation of the directory %s failed" % path99)
-    else:
-        print ("Successfully created the directory %s " % path99)
+    rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt", "w")
+    rgb_log_one_99.write("Orginal Color code(RGB): \n")
+    rgb_log_one_99.write(RGB_info)
+    rgb_log_one_99.write("\n")
+    rgb_log_one_99.write(time_usage_formatted)
+    rgb_log_one_99.close()
 
-  if os.path.exists(path64) == True:
+    rgb_log_two = open("rgb_logs/inverted_cc.txt", "a")
+    rgb_log_two.write("Inverted Color code(RGB): \n")
+    rgb_log_two.write(RGB_info99)
+    rgb_log_two.write("\n")
+    rgb_log_two.write(time_usage_formatted)
+    rgb_log_two.write("\n")
+    rgb_log_two.close()
 
-    pass
+    rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt", "w")
+    rgb_log_two_99.write("Inverted Color code(RGB): \n")
+    rgb_log_two_99.write(RGB_info99)
+    rgb_log_two_99.write("\n")
+    rgb_log_two_99.write(time_usage_formatted)
+    rgb_log_two_99.close()
 
-  if os.path.exists(path64) == False:
+    rgb_log_three = open("rgb_logs/inverted_back.txt", "a")
+    rgb_log_three.write("Inverted Back to orginal(RGB): \n")
+    rgb_log_three.write(RGB_back99)
+    rgb_log_three.write("\n")
+    rgb_log_three.write(time_usage_formatted)
+    rgb_log_three.write("\n")
+    rgb_log_three.close()
 
-    try:
-        os.mkdir(path64)
-    except OSError:
-        print ("Creation of the directory %s failed" % path64)
-    else:
-        print ("Successfully created the directory %s " % path64)
+    rgb_log_three_99 = open("rgb_logs/inverted_back99.txt", "w")
+    rgb_log_three_99.write("Inverted Back to orginal(RGB): \n")
+    rgb_log_three_99.write(RGB_back99)
+    rgb_log_three_99.write("\n")
+    rgb_log_three_99.write(time_usage_formatted)
+    rgb_log_three_99.close()
 
-  if os.path.exists(path_rgb) == True:
+    hex_log_one = open("hexadecimal_logs/orginal_color_code.txt", "a")
+    hex_log_one.write("Orginal Color Code (Hexadecimal):\n")
+    hex_log_one.write(hexadecimal_info)
+    hex_log_one.write("\n")
+    hex_log_one.write(time_usage_formatted)
+    hex_log_one.write("\n")
+    hex_log_one.close()
 
-    pass
-  
-  if os.path.exists(path_rgb) == False:
-    try:
-        os.mkdir(path_rgb)
-    except OSError:
-        print ("Creation of the directory %s failed" % path_rgb)
-    else:
-        print ("Successfully created the directory %s " % path_rgb)
+    hex_log_two = open("hexadecimal_logs/inverted_color_code.txt", "a")
+    hex_log_two.write("Inverted Color Code (Hexadecimal):\n")
+    hex_log_two.write(hexadecimal_info99)
+    hex_log_two.write("\n")
+    hex_log_two.write(time_usage_formatted)
+    hex_log_two.write("\n")
+    hex_log_two.close()
 
-  if os.path.exists(path_hex) == True:
+    hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt", "a")
+    hex_log_three.write("Inverted Back Color Code (Hexadecimal):\n")
+    hex_log_three.write(hexadecimal_info98)
+    hex_log_three.write("\n")
+    hex_log_three.write(time_usage_formatted)
+    hex_log_three.write("\n")
+    hex_log_three.close()
 
-    pass
-  
-  if os.path.exists(path_hex) == False:
-    try:
-        os.mkdir(path_hex)
-    except OSError:
-        print ("Creation of the directory %s failed" % path_hex)
-    else:
-        print ("Successfully created the directory %s " % path_hex)
+    hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt", "w")
+    hex_log_one_99.write("Orginal Color Code (Hexadecimal):\n")
+    hex_log_one_99.write(hexadecimal_info)
+    hex_log_one_99.write("\n")
+    hex_log_one_99.write(time_usage_formatted)
+    hex_log_one_99.close()
 
-  times_to_run = 0
+    hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt", "w")
+    hex_log_two_99.write("Inverted Color Code (Hexadecimal):\n")
+    hex_log_two_99.write(hexadecimal_info99)
+    hex_log_two_99.write("\n")
+    hex_log_two_99.write(time_usage_formatted)
+    hex_log_two_99.close()
 
-  log.stop()
+    hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt", "w")
+    hex_log_three_99.write("Inverted Back Color Code (Hexadecimal):\n")
+    hex_log_three_99.write(hexadecimal_info98)
+    hex_log_three_99.write("\n")
+    hex_log_three_99.write(time_usage_formatted)
+    hex_log_three_99.close()
 
-  final_console_output = ""
+    file_there = 1
 
-  while times_to_run < len(log.messages):
+    while True:
 
-    final_console_output = final_console_output+log.messages[times_to_run]
+        print(
+            "\ntype clear to clear the text files.. or clear all to clear the text files and the color_code.txt( will not work without a color code) or you can always use delete all, use print to print the contents of the console. Exit with the command exit(uppercase or lowercase for all commands)"
+        )
 
-    times_to_run = times_to_run + 1
+        clear_files_option = input("\npress any button to close this window: ")
 
+        if clear_files_option.lower() == "clear" and file_there == 1:
 
+            g2 = open("inverted_colors/inverted_cc.txt", "w")
+            g2.truncate()
+            g2.close()
 
-  time_usage=time.struct_time(time.localtime())
+            f2 = open("logs/console_output.txt", "w")
+            f2.truncate()
+            f2.close()
 
-  time_usage_formatted = time.strftime("\nCreation:[%m/%d/%Y, %H:%M:%S]",time_usage)
+            fo2 = open("logs/console_output99.txt", "w")
+            fo2.truncate()
+            fo2.close()
 
+            go2 = open("inverted_colors/inverted_cc99.txt", "w")
+            go2.truncate()
+            go2.close()
 
-  f = open("logs/console_output.txt", "a")
-  f.write(final_console_output)
-  f.write(time_usage_formatted)
-  f.write("\n")
-  f.close()
-  g = open("inverted_colors/inverted_cc.txt","a")
-  g.write("Inverted Color Code:\n")
-  g.write(test_string99)
-  g.write("\n")
-  g.write(time_usage_formatted)
-  g.write("\n")
-  g.close()
+            rgb_log_one = open("rgb_logs/orginal_cc.txt", "w")
+            rgb_log_one.truncate()
+            rgb_log_one.close()
 
+            rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt", "w")
+            rgb_log_one_99.truncate()
+            rgb_log_one_99.close()
 
+            rgb_log_two = open("rgb_logs/inverted_cc.txt", "w")
+            rgb_log_two.truncate()
+            rgb_log_two.close()
 
+            rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt", "w")
+            rgb_log_two_99.truncate()
+            rgb_log_two_99.close()
 
-  fo = open("logs/console_output99.txt", "w")
-  fo.write(final_console_output)
-  fo.write(time_usage_formatted)
-  fo.close()
+            rgb_log_three = open("rgb_logs/inverted_back.txt", "w")
+            rgb_log_three.write("\n")
+            rgb_log_three.truncate()
+            rgb_log_three.close()
 
-  go = open("inverted_colors/inverted_cc99.txt","w")
-  go.write("Inverted Color Code:\n")
-  go.write(test_string99)
-  go.write("\n")
-  go.write(time_usage_formatted)
-  go.close()
+            rgb_log_three_99 = open("rgb_logs/inverted_back99.txt", "w")
+            rgb_log_three_99.truncate()
+            rgb_log_three_99.close()
 
-  rgb_log_one = open("rgb_logs/orginal_cc.txt","a")
-  rgb_log_one.write("Orginal Color code(RGB): \n")
-  rgb_log_one.write(RGB_info)
-  rgb_log_one.write("\n")
-  rgb_log_one.write(time_usage_formatted)
-  rgb_log_one.write("\n")
-  rgb_log_one.close()
+            hex_log_one = open("hexadecimal_logs/orginal_color_code.txt", "w")
+            hex_log_one.truncate()
+            hex_log_one.close()
 
-  rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt","w")
-  rgb_log_one_99.write("Orginal Color code(RGB): \n")
-  rgb_log_one_99.write(RGB_info)
-  rgb_log_one_99.write("\n")
-  rgb_log_one_99.write(time_usage_formatted)
-  rgb_log_one_99.close()
+            hex_log_two = open("hexadecimal_logs/inverted_color_code.txt", "w")
+            hex_log_two.truncate()
+            hex_log_two.close()
 
-  rgb_log_two = open("rgb_logs/inverted_cc.txt","a")
-  rgb_log_two.write("Inverted Color code(RGB): \n")
-  rgb_log_two.write(RGB_info99)
-  rgb_log_two.write("\n")
-  rgb_log_two.write(time_usage_formatted)
-  rgb_log_two.write("\n")
-  rgb_log_two.close()
+            hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt", "w")
+            hex_log_three.truncate()
+            hex_log_three.close()
 
-  rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt","w")
-  rgb_log_two_99.write("Inverted Color code(RGB): \n")
-  rgb_log_two_99.write(RGB_info99)
-  rgb_log_two_99.write("\n")
-  rgb_log_two_99.write(time_usage_formatted)
-  rgb_log_two_99.close()
+            hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt", "w")
+            hex_log_one_99.truncate()
+            hex_log_one_99.close()
 
-  rgb_log_three = open("rgb_logs/inverted_back.txt","a")
-  rgb_log_three.write("Inverted Back to orginal(RGB): \n")
-  rgb_log_three.write(RGB_back99)
-  rgb_log_three.write("\n")
-  rgb_log_three.write(time_usage_formatted)
-  rgb_log_three.write("\n")
-  rgb_log_three.close()
+            hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt", "w")
+            hex_log_two_99.truncate()
+            hex_log_two_99.close()
 
-  rgb_log_three_99 = open("rgb_logs/inverted_back99.txt","w")
-  rgb_log_three_99.write("Inverted Back to orginal(RGB): \n")
-  rgb_log_three_99.write(RGB_back99)
-  rgb_log_three_99.write("\n")
-  rgb_log_three_99.write(time_usage_formatted)
-  rgb_log_three_99.close()
+            hex_log_three_99 = open(
+                "hexadecimal_logs/inverted_again_color_code99.txt", "w"
+            )
+            hex_log_three_99.truncate()
+            hex_log_three_99.close()
 
-  hex_log_one = open("hexadecimal_logs/orginal_color_code.txt","a")
-  hex_log_one.write("Orginal Color Code (Hexadecimal):\n")
-  hex_log_one.write(hexadecimal_info)
-  hex_log_one.write("\n")
-  hex_log_one.write(time_usage_formatted)
-  hex_log_one.write("\n")
-  hex_log_one.close()
+        if clear_files_option.lower() == "clear all" and file_there == 1:
 
-  hex_log_two = open("hexadecimal_logs/inverted_color_code.txt","a")
-  hex_log_two.write("Inverted Color Code (Hexadecimal):\n")
-  hex_log_two.write(hexadecimal_info99)
-  hex_log_two.write("\n")
-  hex_log_two.write(time_usage_formatted)
-  hex_log_two.write("\n")
-  hex_log_two.close()
+            g2 = open("inverted_colors/inverted_cc.txt", "w")
+            g2.truncate()
+            g2.close()
 
-  hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt","a")
-  hex_log_three.write("Inverted Back Color Code (Hexadecimal):\n")
-  hex_log_three.write(hexadecimal_info98)
-  hex_log_three.write("\n")
-  hex_log_three.write(time_usage_formatted)
-  hex_log_three.write("\n")
-  hex_log_three.close()
+            f2 = open("logs/console_output.txt", "w")
+            f2.truncate()
+            f2.close()
 
-  hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt","w")
-  hex_log_one_99.write("Orginal Color Code (Hexadecimal):\n")
-  hex_log_one_99.write(hexadecimal_info)
-  hex_log_one_99.write("\n")
-  hex_log_one_99.write(time_usage_formatted)
-  hex_log_one_99.close()
+            fo2 = open("logs/console_output99.txt", "w")
+            fo2.truncate()
+            fo2.close()
 
-  hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt","w")
-  hex_log_two_99.write("Inverted Color Code (Hexadecimal):\n")
-  hex_log_two_99.write(hexadecimal_info99)
-  hex_log_two_99.write("\n")
-  hex_log_two_99.write(time_usage_formatted)
-  hex_log_two_99.close()
+            go2 = open("inverted_colors/inverted_cc99.txt", "w")
+            go2.truncate()
+            go2.close()
 
-  hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt","w")
-  hex_log_three_99.write("Inverted Back Color Code (Hexadecimal):\n")
-  hex_log_three_99.write(hexadecimal_info98)
-  hex_log_three_99.write("\n")
-  hex_log_three_99.write(time_usage_formatted)
-  hex_log_three_99.close()
+            color_code_deleter = open("color_code.txt", "w")
+            color_code_deleter.truncate()
+            color_code_deleter.close()
 
-  file_there = 1
+            rgb_log_one = open("rgb_logs/orginal_cc.txt", "w")
+            rgb_log_one.truncate()
+            rgb_log_one.close()
 
-  while True:
+            rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt", "w")
+            rgb_log_one_99.truncate()
+            rgb_log_one_99.close()
 
-    print("\ntype clear to clear the text files.. or clear all to clear the text files and the color_code.txt( will not work without a color code) or you can always use delete all, use print to print the contents of the console. Exit with the command exit(uppercase or lowercase for all commands)")
+            rgb_log_two = open("rgb_logs/inverted_cc.txt", "w")
+            rgb_log_two.truncate()
+            rgb_log_two.close()
 
-    clear_files_option=input("\npress any button to close this window: ")
+            rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt", "w")
+            rgb_log_two_99.truncate()
+            rgb_log_two_99.close()
 
-    if clear_files_option.lower() == "clear" and file_there == 1:
+            rgb_log_three = open("rgb_logs/inverted_back.txt", "w")
+            rgb_log_three.truncate()
+            rgb_log_three.close()
 
-      g2  = open("inverted_colors/inverted_cc.txt","w")
-      g2.truncate()
-      g2.close()
+            rgb_log_three_99 = open("rgb_logs/inverted_back99.txt", "w")
+            rgb_log_three_99.truncate()
+            rgb_log_three_99.close()
 
-      f2 = open("logs/console_output.txt","w")
-      f2.truncate()
-      f2.close()
+            hex_log_one = open("hexadecimal_logs/orginal_color_code.txt", "w")
+            hex_log_one.truncate()
+            hex_log_one.close()
 
-      fo2 = open("logs/console_output99.txt","w")
-      fo2.truncate()
-      fo2.close()
+            hex_log_two = open("hexadecimal_logs/inverted_color_code.txt", "w")
+            hex_log_two.truncate()
+            hex_log_two.close()
 
-      go2 = open("inverted_colors/inverted_cc99.txt","w")
-      go2.truncate()
-      go2.close()
+            hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt", "w")
+            hex_log_three.truncate()
+            hex_log_three.close()
 
-      rgb_log_one = open("rgb_logs/orginal_cc.txt","w")
-      rgb_log_one.truncate()
-      rgb_log_one.close()
+            hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt", "w")
+            hex_log_one_99.truncate()
+            hex_log_one_99.close()
 
-      rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt","w")
-      rgb_log_one_99.truncate()
-      rgb_log_one_99.close()
+            hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt", "w")
+            hex_log_two_99.truncate()
+            hex_log_two_99.close()
 
-      rgb_log_two = open("rgb_logs/inverted_cc.txt","w")
-      rgb_log_two.truncate()
-      rgb_log_two.close()
+            hex_log_three_99 = open(
+                "hexadecimal_logs/inverted_again_color_code99.txt", "w"
+            )
+            hex_log_three_99.truncate()
+            hex_log_three_99.close()
 
-      rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt","w")
-      rgb_log_two_99.truncate()
-      rgb_log_two_99.close()
+        if clear_files_option.lower() == "delete all":
 
-      rgb_log_three = open("rgb_logs/inverted_back.txt","w")
-      rgb_log_three.write("\n")
-      rgb_log_three.truncate()
-      rgb_log_three.close()
+            file_there = 0
 
-      rgb_log_three_99 = open("rgb_logs/inverted_back99.txt","w")
-      rgb_log_three_99.truncate()
-      rgb_log_three_99.close()
+            for root, dirs, files in os.walk(os.getcwd() + "/logs"):
+                for f in files:
+                    os.unlink(os.path.join(root, f))
+                for d in dirs:
+                    shutil.rmtree(os.path.join(root, d))
 
-      hex_log_one = open("hexadecimal_logs/orginal_color_code.txt","w")
-      hex_log_one.truncate()
-      hex_log_one.close()
+            os.rmdir(os.getcwd() + "/logs")
 
-      hex_log_two = open("hexadecimal_logs/inverted_color_code.txt","w")
-      hex_log_two.truncate()
-      hex_log_two.close()
+            for root, dirs, files in os.walk(os.getcwd() + "/rgb_logs"):
+                for f in files:
+                    os.unlink(os.path.join(root, f))
+                for d in dirs:
+                    shutil.rmtree(os.path.join(root, d))
 
-      hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt","w")
-      hex_log_three.truncate()
-      hex_log_three.close()
+            os.rmdir(os.getcwd() + "/rgb_logs")
 
+            for root, dirs, files in os.walk(os.getcwd() + "/inverted_colors"):
+                for f in files:
+                    os.unlink(os.path.join(root, f))
+                for d in dirs:
+                    shutil.rmtree(os.path.join(root, d))
 
-      hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt","w")
-      hex_log_one_99.truncate()
-      hex_log_one_99.close()
+            os.rmdir(os.getcwd() + "/inverted_colors")
 
+            os.remove("color_code.txt")
 
-      hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt","w")
-      hex_log_two_99.truncate()
-      hex_log_two_99.close()
+            for root, dirs, files in os.walk(os.getcwd() + "/hexadecimal_logs"):
+                for f in files:
+                    os.unlink(os.path.join(root, f))
+                for d in dirs:
+                    shutil.rmtree(os.path.join(root, d))
 
+            os.rmdir(os.getcwd() + "/hexadecimal_logs")
 
-      hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt","w")
-      hex_log_three_99.truncate()
-      hex_log_three_99.close()
+        if clear_files_option.lower() == "print":
 
+            print("\nPrinting contents of Console....")
 
-    if clear_files_option.lower() == "clear all" and file_there == 1:
+            print_content = 0
 
-      g2  = open("inverted_colors/inverted_cc.txt","w")
-      g2.truncate()
-      g2.close()
+            string_to_use = ""
 
-      f2 = open("logs/console_output.txt","w")
-      f2.truncate()
-      f2.close()
+            while print_content < len(log.messages):
 
-      fo2 = open("logs/console_output99.txt","w")
-      fo2.truncate()
-      fo2.close()
+                string_to_use = string_to_use + (log.messages[print_content])
 
-      go2 = open("inverted_colors/inverted_cc99.txt","w")
-      go2.truncate()
-      go2.close()
+                print_content = print_content + 1
 
-      color_code_deleter = open("color_code.txt","w")
-      color_code_deleter.truncate()
-      color_code_deleter.close()
+            print("\n")
+            print(string_to_use)
 
-      rgb_log_one = open("rgb_logs/orginal_cc.txt","w")
-      rgb_log_one.truncate()
-      rgb_log_one.close()
+        if clear_files_option.lower() == "exit":
 
-      rgb_log_one_99 = open("rgb_logs/orginal_cc99.txt","w")
-      rgb_log_one_99.truncate()
-      rgb_log_one_99.close()
-
-      rgb_log_two = open("rgb_logs/inverted_cc.txt","w")
-      rgb_log_two.truncate()
-      rgb_log_two.close()
-
-      rgb_log_two_99 = open("rgb_logs/inverted_cc99.txt","w")
-      rgb_log_two_99.truncate()
-      rgb_log_two_99.close()
-
-      rgb_log_three = open("rgb_logs/inverted_back.txt","w")
-      rgb_log_three.truncate()
-      rgb_log_three.close()
-
-      rgb_log_three_99 = open("rgb_logs/inverted_back99.txt","w")
-      rgb_log_three_99.truncate()
-      rgb_log_three_99.close()
-
-      hex_log_one = open("hexadecimal_logs/orginal_color_code.txt","w")
-      hex_log_one.truncate()
-      hex_log_one.close()
-
-      hex_log_two = open("hexadecimal_logs/inverted_color_code.txt","w")
-      hex_log_two.truncate()
-      hex_log_two.close()
-
-      hex_log_three = open("hexadecimal_logs/inverted_again_color_code.txt","w")
-      hex_log_three.truncate()
-      hex_log_three.close()
-
-
-      hex_log_one_99 = open("hexadecimal_logs/orginal_color_code99.txt","w")
-      hex_log_one_99.truncate()
-      hex_log_one_99.close()
-
-
-      hex_log_two_99 = open("hexadecimal_logs/inverted_color_code99.txt","w")
-      hex_log_two_99.truncate()
-      hex_log_two_99.close()
-
-
-      hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt","w")
-      hex_log_three_99.truncate()
-      hex_log_three_99.close()
-
-    if clear_files_option.lower() == "delete all":
-
-      file_there = 0
-
-      for root, dirs, files in os.walk(os.getcwd()+"/logs"):
-        for f in files:
-            os.unlink(os.path.join(root, f))
-        for d in dirs:
-            shutil.rmtree(os.path.join(root, d))
-
-      os.rmdir(os.getcwd()+"/logs")
-
-      for root, dirs, files in os.walk(os.getcwd()+"/rgb_logs"):
-        for f in files:
-            os.unlink(os.path.join(root, f))
-        for d in dirs:
-            shutil.rmtree(os.path.join(root, d))
-
-      os.rmdir(os.getcwd()+"/rgb_logs")
-
-      for root, dirs, files in os.walk(os.getcwd()+"/inverted_colors"):
-        for f in files:
-          os.unlink(os.path.join(root, f))
-        for d in dirs:
-          shutil.rmtree(os.path.join(root, d))
-
-      os.rmdir(os.getcwd()+"/inverted_colors")
-
-      os.remove("color_code.txt")
-
-      for root, dirs, files in os.walk(os.getcwd()+"/hexadecimal_logs"):
-          for f in files:
-            os.unlink(os.path.join(root, f))
-          for d in dirs:
-            shutil.rmtree(os.path.join(root, d))
-
-      os.rmdir(os.getcwd()+"/hexadecimal_logs")
-
-    if clear_files_option.lower() == "print":
-
-      print("\nPrinting contents of Console....")
-
-      print_content = 0
-
-      string_to_use = ""
-
-      while print_content < len(log.messages):
-
-        string_to_use=string_to_use+(log.messages[print_content])
-
-        print_content = print_content + 1
-
-      print("\n")
-      print(string_to_use)
-
-    if clear_files_option.lower() == "exit":
-
-      break
+            break
