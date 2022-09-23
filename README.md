@@ -39,7 +39,7 @@ Need extra support?:
 
 Join here:
 
-<https://discord.gg/FPBZDUQ>
+<https://discord.gg/eVQH2ZRYpz>
 
 This is where I do my bloopers above.
 
@@ -52,3 +52,5 @@ You can always exit if you want.
 yes please DM me requests too.
 
 That's all :D
+
+(Also JDJG Bot's Rewrite has the new recolor inverter code, credit Juuzoq)
