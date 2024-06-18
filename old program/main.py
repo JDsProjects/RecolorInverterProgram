@@ -1,9 +1,8 @@
-from os import system, name
-import sys
-import time
 import os
 import shutil
-
+import sys
+import time
+from os import name, system
 
 default_cc = """
 8107EC40 0000
@@ -150,9 +149,7 @@ if can_countie == True:
 
 if can_countie == False:
 
-    print(
-        "\n Since Color_code.txt was non existence, it's using a default color code.)"
-    )
+    print("\n Since Color_code.txt was non existence, it's using a default color code.)")
 
     complete_color_code_998 = open("color_code.txt", "w")
     complete_color_code_998.close()
@@ -268,18 +265,7 @@ if run_rest == "True":
             + str(color_section2[0:2])
         )
 
-        RGB_info = (
-            RGB_info
-            + "\nRGB Value "
-            + str(color_counter)
-            + ": ("
-            + str(r)
-            + ","
-            + str(g)
-            + ","
-            + str(b)
-            + ")"
-        )
+        RGB_info = RGB_info + "\nRGB Value " + str(color_counter) + ": (" + str(r) + "," + str(g) + "," + str(b) + ")"
 
         r = 0xFF - r
         g = 0xFF - g
@@ -295,9 +281,7 @@ if run_rest == "True":
 
         color_code_needed = color_code_front + " " + first_color_line
 
-        color_code_needed_2 = (
-            color_code_front2 + " " + second_color_line + color_section2[2:4]
-        )
+        color_code_needed_2 = color_code_front2 + " " + second_color_line + color_section2[2:4]
 
         Inverted_color_code.append(color_code_needed)
 
@@ -368,16 +352,7 @@ if run_rest == "True":
         b = int(color_section2[0:2], 16)
 
         RGB_info99 = (
-            RGB_info99
-            + "\nRGB Value "
-            + str(color_counter2)
-            + ": ("
-            + str(r)
-            + ","
-            + str(g)
-            + ","
-            + str(b)
-            + ")"
+            RGB_info99 + "\nRGB Value " + str(color_counter2) + ": (" + str(r) + "," + str(g) + "," + str(b) + ")"
         )
 
         r = 0xFF - r
@@ -385,29 +360,14 @@ if run_rest == "True":
         b = 0xFF - b
 
         RGB_back99 = (
-            RGB_back99
-            + "\nRGB Value "
-            + str(color_counter2)
-            + ": ("
-            + str(r)
-            + ","
-            + str(g)
-            + ","
-            + str(b)
-            + ")"
+            RGB_back99 + "\nRGB Value " + str(color_counter2) + ": (" + str(r) + "," + str(g) + "," + str(b) + ")"
         )
 
         # solution suggested by John10v10#5883
 
         bits_used998 = f"{r:0{2}x}{g:0{2}x}{b:0{2}x}"
 
-        hexadecimal_info98 = (
-            hexadecimal_info98
-            + "\nHexadecimal Value "
-            + str(color_counter2)
-            + ": #"
-            + bits_used998
-        )
+        hexadecimal_info98 = hexadecimal_info98 + "\nHexadecimal Value " + str(color_counter2) + ": #" + bits_used998
 
         first_color_line = bits_used998[0:4].upper()
 
@@ -415,9 +375,7 @@ if run_rest == "True":
 
         color_code_needed = color_code_front + " " + first_color_line
 
-        color_code_needed_2 = (
-            color_code_front2 + " " + second_color_line + color_section2[2:4]
-        )
+        color_code_needed_2 = color_code_front2 + " " + second_color_line + color_section2[2:4]
 
         Inverted_color_code_inverted.append(color_code_needed)
 
@@ -763,9 +721,7 @@ if run_rest == "True":
             hex_log_two_99.truncate()
             hex_log_two_99.close()
 
-            hex_log_three_99 = open(
-                "hexadecimal_logs/inverted_again_color_code99.txt", "w"
-            )
+            hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt", "w")
             hex_log_three_99.truncate()
             hex_log_three_99.close()
 
@@ -835,9 +791,7 @@ if run_rest == "True":
             hex_log_two_99.truncate()
             hex_log_two_99.close()
 
-            hex_log_three_99 = open(
-                "hexadecimal_logs/inverted_again_color_code99.txt", "w"
-            )
+            hex_log_three_99 = open("hexadecimal_logs/inverted_again_color_code99.txt", "w")
             hex_log_three_99.truncate()
             hex_log_three_99.close()
 

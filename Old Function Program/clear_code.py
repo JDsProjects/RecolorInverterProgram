@@ -1,4 +1,4 @@
-from os import system, name
+from os import name, system
 
 # import only system from os
 

@@ -75,9 +75,7 @@ def RecolorInverter(complete_color_code):
 
         color_code_needed = color_code_front + " " + first_color_line
 
-        color_code_needed_2 = (
-            color_code_front2 + " " + second_color_line + color_section2[2:4]
-        )
+        color_code_needed_2 = color_code_front2 + " " + second_color_line + color_section2[2:4]
 
         Inverted_color_code.append(color_code_needed)
 
@@ -139,9 +137,7 @@ def RecolorInverter(complete_color_code):
 
         color_code_needed = color_code_front + " " + first_color_line
 
-        color_code_needed_2 = (
-            color_code_front2 + " " + second_color_line + color_section2[2:4]
-        )
+        color_code_needed_2 = color_code_front2 + " " + second_color_line + color_section2[2:4]
 
         Inverted_color_code_inverted.append(color_code_needed)
 
